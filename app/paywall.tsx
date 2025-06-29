@@ -6,7 +6,8 @@ import {
   TouchableOpacity, 
   SafeAreaView,
   ScrollView,
-  Alert
+  Alert,
+  Image
 } from 'react-native';
 import { router } from 'expo-router';
 import { ArrowLeft, Crown, Check, Zap, Shield, FileText, Filter, ChartBar as BarChart3, Users, Phone } from 'lucide-react-native';
@@ -152,6 +153,15 @@ export default function PaywallScreen() {
             • Subscription analytics & insights{'\n'}
             • Cross-platform user management
           </Text>
+        </View>
+
+        {/* Built with Bolt.new Badge */}
+        <View style={styles.boltBadgeContainer}>
+          <Image
+            source={{ uri: 'https://bolt.new/Badge.svg' }}
+            style={styles.boltBadge}
+            resizeMode="contain"
+          />
         </View>
       </ScrollView>
 
@@ -375,6 +385,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#475569',
     lineHeight: 18,
+  },
+  boltBadgeContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  boltBadge: {
+    width: 120,
+    height: 40,
   },
   footer: {
     padding: 20,
